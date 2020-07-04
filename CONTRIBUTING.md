@@ -201,16 +201,15 @@ git branch -D my-fix-branch
 git push origin --delete my-fix-branch
 ```
 
-## 项目机器人说明
+-   命令行中展示log tree
 
-本项目已接入 Github 机器人：`Menbotics`，该机器人可以：
+```bash
+git log --graph --decorate --oneline
+```
 
--   **`Issue` 自动打标签**：具体见 [0、提交 issue](#0提交-issue)
--   **任务认领**：具体见 [1、认领任务](#1认领任务)
--   **代码自动合并**：有 PR(Pull Request) 提交上来之后，有代码合并权限的人员使用 `/approve` 让机器人自动合入代码。
+-   只把branch上部分commit rebase, 比如只rebase last 2 commits
+```bash
+git rebase --onto master HEAD~2
+```
 
-机器人配置见 [hypertrons.json](./.github/hypertrons.json)，如在该配置文件中可以看到具体有哪些人员有代码合并权限。
 
-## Slack 交流群组
-
-此外，我们已经建立了 [Slack 交流群组](https://join.slack.com/t/wuhan2020/shared_invite/enQtOTI2NTU1NzU3MTM2LWQ1YjIzMDllYjYzYTE1OTNhMWU4OTZkOGYzOGJhOWM2MzdlMjgwMmZiOWEzYTQwNmJkZDI4OWRmM2Q2ZDM1MTc)，已建立前端、后端、数据同步等对应 channel，欢迎大家加入共同探讨各类技术或非技术类问题，让我们大家一起齐心协力，众志成城，共克时艰！
